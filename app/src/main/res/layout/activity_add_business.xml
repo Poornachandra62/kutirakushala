@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_cream">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Photo picker -->
+        <FrameLayout android:layout_width="match_parent" android:layout_height="180dp"
+            android:layout_marginBottom="16dp">
+            <ImageView android:id="@+id/ivBusinessPhoto"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:scaleType="centerCrop" android:src="@drawable/ic_business_placeholder"
+                android:background="@color/bg_green_light" android:contentDescription="Pick photo"/>
+            <Button android:id="@+id/btnPickPhoto"
+                android:layout_width="wrap_content" android:layout_height="40dp"
+                android:layout_gravity="bottom|end" android:layout_margin="8dp"
+                android:text="📷 Photo" android:textSize="13sp"
+                android:backgroundTint="@color/primary_green"/>
+        </FrameLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Business Name *" android:textSize="13sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etBusinessName"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:background="@drawable/bg_field" android:paddingHorizontal="12dp"
+            android:textSize="16sp" android:textColor="@color/text_primary"
+            android:hint="e.g. Savitha Baskets" android:layout_marginBottom="12dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Owner / Your Name *" android:textSize="13sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etOwnerName"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:background="@drawable/bg_field" android:paddingHorizontal="12dp"
+            android:textSize="16sp" android:textColor="@color/text_primary"
+            android:hint="Your full name" android:layout_marginBottom="12dp"
+            android:inputType="textPersonName"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Skill Area *" android:textSize="13sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etSkillArea"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:background="@drawable/bg_field" android:paddingHorizontal="12dp"
+            android:textSize="16sp" android:textColor="@color/text_primary"
+            android:hint="e.g. Basket Weaving, Agarbatti Rolling"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Location (Village / Taluk) *" android:textSize="13sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etLocation"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:background="@drawable/bg_field" android:paddingHorizontal="12dp"
+            android:textSize="16sp" android:textColor="@color/text_primary"
+            android:hint="e.g. Tumkur, Karnataka" android:layout_marginBottom="12dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Category *" android:textSize="13sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+        <Spinner android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:background="@drawable/bg_field" android:paddingHorizontal="8dp"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Phone Number *" android:textSize="13sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etPhone"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:background="@drawable/bg_field" android:paddingHorizontal="12dp"
+            android:textSize="16sp" android:textColor="@color/text_primary"
+            android:hint="10-digit mobile number" android:inputType="phone"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Weekly Production Capacity (units)" android:textSize="13sp"
+            android:textColor="@color/text_secondary" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etCapacityUnits"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:background="@drawable/bg_field" android:paddingHorizontal="12dp"
+            android:textSize="16sp" android:textColor="@color/text_primary"
+            android:hint="e.g. 200" android:inputType="number"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Business Description" android:textSize="13sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etDescription"
+            android:layout_width="match_parent" android:layout_height="100dp"
+            android:background="@drawable/bg_field" android:paddingHorizontal="12dp"
+            android:paddingTop="10dp" android:textSize="15sp" android:textColor="@color/text_primary"
+            android:hint="Describe your business, experience, speciality..."
+            android:inputType="textMultiLine" android:gravity="top"
+            android:layout_marginBottom="20dp"/>
+
+        <Button android:id="@+id/btnSaveBusiness"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:text="✅  Register My Business"
+            android:textSize="17sp" android:textStyle="bold"
+            android:backgroundTint="@color/primary_green"
+            android:layout_marginBottom="32dp"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

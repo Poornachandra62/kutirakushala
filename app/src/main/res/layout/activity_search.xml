@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_cream">
+
+    <!-- Search bar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/primary_green" android:padding="12dp"
+        android:orientation="vertical">
+
+        <EditText android:id="@+id/etSearch"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:background="@drawable/bg_search_field"
+            android:paddingHorizontal="14dp" android:textSize="15sp"
+            android:hint="🔍 Search by name, skill, location..."
+            android:textColor="@color/text_primary"
+            android:textColorHint="#888888"
+            android:imeOptions="actionSearch"
+            android:inputType="text"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="8dp">
+            <Spinner android:id="@+id/spinnerCategory"
+                android:layout_width="0dp" android:layout_height="44dp"
+                android:layout_weight="1" android:background="@drawable/bg_search_field"
+                android:paddingHorizontal="8dp" android:layout_marginEnd="8dp"/>
+            <EditText android:id="@+id/etLocation"
+                android:layout_width="0dp" android:layout_height="44dp"
+                android:layout_weight="1" android:background="@drawable/bg_search_field"
+                android:paddingHorizontal="10dp" android:hint="Location"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="8dp">
+            <Button android:id="@+id/btnApplyFilter"
+                android:layout_width="0dp" android:layout_height="40dp"
+                android:layout_weight="1" android:text="Apply Filter"
+                android:textSize="13sp" android:backgroundTint="@color/accent_orange"
+                android:layout_marginEnd="8dp"/>
+            <Button android:id="@+id/btnClear"
+                android:layout_width="0dp" android:layout_height="40dp"
+                android:layout_weight="1" android:text="Clear"
+                android:textSize="13sp" android:backgroundTint="@color/white"
+                android:textColor="@color/primary_green"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView android:id="@+id/tvResultCount"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="0 results" android:textColor="@color/text_secondary"
+        android:textSize="13sp" android:paddingHorizontal="12dp" android:paddingVertical="8dp"/>
+
+    <TextView android:id="@+id/tvEmpty"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="No results found. Try a different search."
+        android:textColor="@color/text_secondary" android:textSize="15sp"
+        android:gravity="center" android:padding="40dp" android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvResults"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:clipToPadding="false"/>
+
+</LinearLayout>

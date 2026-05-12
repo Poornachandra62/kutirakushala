@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Units available this week:" android:textSize="15sp"
+        android:textColor="#333333" android:layout_marginBottom="8dp"/>
+
+    <EditText android:id="@+id/etCapacityUnits"
+        android:layout_width="match_parent" android:layout_height="56dp"
+        android:inputType="number" android:textSize="22sp"
+        android:hint="e.g. 200" android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Current availability:" android:textSize="15sp"
+        android:textColor="#333333" android:layout_marginBottom="8dp"/>
+
+    <RadioGroup android:id="@+id/rgCapacityStatus"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton android:id="@+id/rbAvailable"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="🟢  Available — Taking orders"
+            android:textSize="15sp" android:buttonTint="#27AE60"/>
+
+        <RadioButton android:id="@+id/rbFull"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="🔴  Full — Cannot take more orders"
+            android:textSize="15sp" android:buttonTint="#C0392B"/>
+
+        <RadioButton android:id="@+id/rbPaused"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="⚫  Paused — Temporarily not available"
+            android:textSize="15sp" android:buttonTint="#757575"/>
+    </RadioGroup>
+
+</LinearLayout>

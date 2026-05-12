@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary — earthy green (agriculture, growth) -->
+    <color name="primary_green">#2E7D32</color>
+    <color name="primary_green_dark">#1B5E20</color>
+    <color name="bg_green_light">#E8F5E9</color>
+
+    <!-- Accent — warm orange (craft, handmade) -->
+    <color name="accent_orange">#E65100</color>
+    <color name="accent_orange_light">#FBE9E7</color>
+
+    <!-- Capacity status -->
+    <color name="capacity_green">#27AE60</color>
+    <color name="capacity_red">#C0392B</color>
+    <color name="capacity_grey">#757575</color>
+    <color name="capacity_green_bg">#E8F5E9</color>
+    <color name="capacity_red_bg">#FFEBEE</color>
+    <color name="capacity_grey_bg">#F5F5F5</color>
+
+    <!-- Backgrounds -->
+    <color name="bg_cream">#FAFAF7</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Text -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+
+    <!-- System -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+</resources>

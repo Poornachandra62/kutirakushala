@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_cream">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Hero photo -->
+        <ImageView
+            android:id="@+id/ivBusinessPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Business photo"
+            android:src="@drawable/ic_business_placeholder"
+            android:background="@color/primary_green"/>
+
+        <!-- Main info card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvBusinessName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:fontFamily="serif"/>
+
+                <TextView
+                    android:id="@+id/tvSkillArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/primary_green"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+                    <TextView android:id="@+id/tvOwnerName"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:textSize="14sp"
+                        android:textColor="@color/text_secondary"/>
+                    <TextView android:id="@+id/tvCategory"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:background="@drawable/bg_category_chip"
+                        android:textColor="@color/white" android:textSize="12sp"
+                        android:textStyle="bold" android:paddingHorizontal="12dp"
+                        android:paddingVertical="4dp"/>
+                </LinearLayout>
+
+                <TextView android:id="@+id/tvLocation"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textSize="14sp" android:textColor="@color/text_secondary"
+                    android:layout_marginTop="6dp"/>
+
+                <TextView android:id="@+id/tvDescription"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textSize="14sp" android:textColor="@color/text_primary"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="📞 Phone" android:textColor="@color/text_secondary"
+                    android:textSize="12sp" android:layout_marginTop="10dp"/>
+                <TextView android:id="@+id/tvPhone"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textSize="16sp" android:textColor="@color/text_primary"
+                    android:textStyle="bold"/>
+
+                <!-- DIRECT CONNECT button -->
+                <Button
+                    android:id="@+id/btnCallNow"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="📞  CALL NOW — Direct Connect"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/primary_green"
+                    android:layout_marginTop="14dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginTop="8dp">
+                    <Button android:id="@+id/btnEditBusiness"
+                        android:layout_width="0dp" android:layout_height="44dp"
+                        android:layout_weight="1" android:text="✏ Edit"
+                        android:textSize="14sp" android:backgroundTint="@color/accent_orange"
+                        android:layout_marginEnd="6dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Capacity meter card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCapacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="📦 Capacity Meter" android:textSize="16sp"
+                    android:textStyle="bold" android:textColor="@color/text_primary"/>
+
+                <TextView android:id="@+id/tvCapacityUnits"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textSize="20sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary" android:layout_marginTop="4dp"/>
+
+                <TextView android:id="@+id/tvCapacityStatus"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textSize="16sp" android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+
+                <Button android:id="@+id/btnUpdateCapacity"
+                    android:layout_width="match_parent" android:layout_height="48dp"
+                    android:text="🔄  Update Capacity (1 Tap)"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:backgroundTint="@color/text_primary"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Product catalog -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingHorizontal="12dp"
+            android:paddingBottom="20dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="🛒 Product Catalog"
+                    android:textSize="17sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                <TextView android:id="@+id/tvProductCount"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textSize="13sp" android:textColor="@color/text_secondary"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:nestedScrollingEnabled="false"/>
+
+            <Button android:id="@+id/btnAddProduct"
+                android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="➕  Add Product to Catalog"
+                android:textSize="14sp" android:backgroundTint="@color/accent_orange"
+                android:layout_marginTop="12dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

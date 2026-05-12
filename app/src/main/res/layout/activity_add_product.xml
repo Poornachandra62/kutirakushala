@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_cream">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <FrameLayout android:layout_width="match_parent" android:layout_height="160dp"
+            android:layout_marginBottom="16dp">
+            <ImageView android:id="@+id/ivProductPhoto"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:scaleType="centerCrop" android:src="@drawable/ic_product_placeholder"
+                android:background="@color/bg_green_light" android:contentDescription="Product photo"/>
+            <Button android:id="@+id/btnPickPhoto"
+                android:layout_width="wrap_content" android:layout_height="40dp"
+                android:layout_gravity="bottom|end" android:layout_margin="8dp"
+                android:text="📷 Photo" android:backgroundTint="@color/accent_orange"/>
+        </FrameLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Product Name *" android:textSize="13sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etProductName"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:background="@drawable/bg_field" android:paddingHorizontal="12dp"
+            android:textSize="16sp" android:hint="e.g. Hand-woven Bamboo Basket"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Unit *" android:textSize="13sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etUnit"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:background="@drawable/bg_field" android:paddingHorizontal="12dp"
+            android:textSize="16sp" android:hint="e.g. per piece, per kg, per 100 sticks"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Wholesale Price (₹) *" android:textSize="13sp"
+                    android:textColor="@color/text_secondary" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etWholesalePrice"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_field" android:paddingHorizontal="12dp"
+                    android:textSize="16sp" android:hint="45" android:inputType="numberDecimal"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Minimum Order" android:textSize="13sp"
+                    android:textColor="@color/text_secondary" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etMinOrder"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_field" android:paddingHorizontal="12dp"
+                    android:textSize="16sp" android:hint="100" android:inputType="number"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Product Description" android:textSize="13sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etProductDesc"
+            android:layout_width="match_parent" android:layout_height="90dp"
+            android:background="@drawable/bg_field" android:paddingHorizontal="12dp"
+            android:paddingTop="10dp" android:textSize="15sp"
+            android:hint="Short description..." android:inputType="textMultiLine"
+            android:gravity="top" android:layout_marginBottom="20dp"/>
+
+        <Button android:id="@+id/btnSaveProduct"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:text="✅  Save Product"
+            android:textSize="17sp" android:textStyle="bold"
+            android:backgroundTint="@color/accent_orange"/>
+
+        <Button android:id="@+id/btnDeleteProduct"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="🗑  Delete Product"
+            android:textSize="15sp" android:backgroundTint="#C62828"
+            android:layout_marginTop="10dp" android:layout_marginBottom="32dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

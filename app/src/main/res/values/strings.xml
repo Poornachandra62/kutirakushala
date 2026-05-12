@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kutira-Kushala</string>
+    <string name="tagline">Micro-Factory Showcase</string>
+    <string name="register_business">Register Business</string>
+    <string name="search">Search</string>
+    <string name="call_now">Call Now</string>
+    <string name="capacity_available">Available</string>
+    <string name="capacity_full">Full</string>
+    <string name="capacity_paused">Paused</string>
+</resources>
